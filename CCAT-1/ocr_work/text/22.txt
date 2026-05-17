@@ -1,0 +1,8 @@
+Assume the first two statements are true. Is the final statement: 1) True, 2) False, or.
+3) Uncertain based on the information provided?
+Jeff works in the electronics store. °
+People who work in the electronics store wear uniforms.
+Jeff wears a uniform. es
+h |
++7
+ee :

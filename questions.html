@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCAT Combined</title>
+  <link rel="stylesheet" href="ccat.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>CCAT Combined</h1>
+        <p class="subtitle">One 50-question test, or practice every question across all folders. Text items show prompt and answer values. Spatial or unclear items stay image-backed for review.</p>
+      </div>
+      <div class="controls">
+        <select id="setSelect" aria-label="Question set"></select>
+        <select id="categorySelect" aria-label="Category"></select>
+        <button class="btn active" id="modeTest" type="button">50 question test</button>
+        <button class="btn" id="modeAll" type="button">All questions</button>
+        <button class="btn primary" id="finish" type="button">Score</button>
+        <button class="btn" id="reset" type="button">Reset</button>
+        <a class="btn" href="answers.html">Keys</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="status">
+        <div>
+          <div class="meta-line" id="metaLine"></div>
+          <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+        </div>
+        <div class="timer" id="timer">15:00</div>
+      </div>
+
+      <div class="question-wrap">
+        <button class="nav" id="prev" type="button" aria-label="Previous question">&lt;</button>
+        <div class="stage" id="stage"></div>
+        <button class="nav" id="next" type="button" aria-label="Next question">&gt;</button>
+      </div>
+
+      <div class="answer-bar" id="answerBar" aria-label="Answer choices"></div>
+      <div class="chips" id="chips" aria-label="Question list"></div>
+
+      <section class="score-panel" id="scorePanel" aria-live="polite">
+        <div class="score-head">
+          <div>
+            <p class="score-title" id="scoreTitle"></p>
+            <p class="score-meta" id="scoreMeta"></p>
+          </div>
+          <button class="btn" id="hideScore" type="button">Hide</button>
+        </div>
+        <div class="review-tabs">
+          <button class="btn active" data-review="incorrect" type="button">Incorrect</button>
+          <button class="btn" data-review="all" type="button">All replies</button>
+          <button class="btn" data-review="needs" type="button">Needs review</button>
+          <button class="btn" data-review="missing" type="button">No key</button>
+        </div>
+        <div class="review-grid" id="reviewGrid"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="ccat-data.js"></script>
+  <script src="ccat-text-bank.js"></script>
+  <script src="questions.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCAT Answer Key</title>
+  <style>
+    :root {
+      --blue: #3b45c8;
+      --blue-dark: #283096;
+      --ink: #202124;
+      --muted: #71757f;
+      --line: #d9dce7;
+      --paper: #ffffff;
+      --bg: #f2f4fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Aptos", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    .app {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 32px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .link {
+      color: var(--blue-dark);
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 55px rgba(38, 44, 80, .10);
+      overflow: hidden;
+    }
+
+    .progress-wrap {
+      padding: 18px 22px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .progress {
+      height: 12px;
+      background: #e4e6f2;
+      overflow: hidden;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--blue);
+      transition: width .18s ease;
+    }
+
+    .meta {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .viewer {
+      padding: 20px 22px 22px;
+    }
+
+    .answer-box {
+      border: 1px solid var(--line);
+      background: #f8f9fd;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .answer-title {
+      margin: 0 0 14px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .choices {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .choice {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .choice input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--blue);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 88px;
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      resize: vertical;
+      font: inherit;
+      background: #fff;
+    }
+
+    .saved {
+      min-height: 20px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .image-shell {
+      min-height: 52vh;
+      display: grid;
+      place-items: center;
+      background: #f8f9fd;
+      border: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-height: 62vh;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .missing {
+      display: none;
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 48px 1fr 48px;
+      align-items: center;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      min-height: 44px;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    button:hover:not(:disabled),
+    .chip:hover:not(.disabled),
+    .choice:hover {
+      border-color: var(--blue);
+      color: var(--blue-dark);
+    }
+
+    button:disabled {
+      opacity: .35;
+      cursor: not-allowed;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .chip {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      display: inline-grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .chip.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .chip.answered {
+      box-shadow: inset 0 -4px 0 rgba(59, 69, 200, .22);
+    }
+
+    .chip.disabled {
+      background: #eef0f7;
+      color: #a3a7b3;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 720px) {
+      .app {
+        width: min(100% - 18px, 1180px);
+        padding-top: 10px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .progress-wrap,
+      .viewer {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .controls {
+        grid-template-columns: 42px 1fr 42px;
+        gap: 8px;
+      }
+
+      .chip {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div class="topbar">
+      <h1>CCAT Answer Key</h1>
+      <a class="link" href="questions.html">Open timed quiz</a>
+    </div>
+
+    <section class="panel" aria-label="Answer viewer">
+      <div class="progress-wrap">
+        <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+        <div class="meta" id="meta">Question 9 / 50</div>
+      </div>
+
+      <div class="viewer">
+        <div class="image-shell">
+          <img id="questionImage" alt="Question screenshot">
+          <div class="missing" id="missing">No image saved for this question.</div>
+        </div>
+
+        <div class="answer-box">
+          <p class="answer-title" id="answerTitle">Question 9 correct answer</p>
+          <div class="choices" id="choices"></div>
+          <textarea id="note" placeholder="Answer note"></textarea>
+          <div class="saved" id="saved"></div>
+        </div>
+
+        <div class="controls">
+          <button id="prev" type="button" aria-label="Previous question">&lt;</button>
+          <div class="chips" id="chips" aria-label="Question numbers"></div>
+          <button id="next" type="button" aria-label="Next question">&gt;</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const total = 50;
+    const available = new Set(Array.from({ length: 42 }, (_, i) => i + 9));
+    const labels = ["A", "B", "C", "D", "E"];
+    let current = Number(new URLSearchParams(location.search).get("q")) || 9;
+
+    const meta = document.getElementById("meta");
+    const progress = document.getElementById("progress");
+    const chips = document.getElementById("chips");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const choices = document.getElementById("choices");
+    const note = document.getElementById("note");
+    const saved = document.getElementById("saved");
+    const answerTitle = document.getElementById("answerTitle");
+    const img = document.getElementById("questionImage");
+    const missing = document.getElementById("missing");
+
+    function key(n) {
+      return `ccat-key-${n}`;
+    }
+
+    function noteKey(n) {
+      return `ccat-key-note-${n}`;
+    }
+
+    function fileName(n) {
+      return `${String(n).padStart(2, "0")}.JPG`;
+    }
+
+    function loadAnswer(n) {
+      return {
+        choice: localStorage.getItem(key(n)) || "",
+        note: localStorage.getItem(noteKey(n)) || ""
+      };
+    }
+
+    function saveAnswer() {
+      const selected = document.querySelector("input[name='answer']:checked");
+      if (selected) localStorage.setItem(key(current), selected.value);
+      localStorage.setItem(noteKey(current), note.value);
+      saved.textContent = "Saved";
+      setTimeout(() => { saved.textContent = ""; }, 900);
+    }
+
+    function nearestAvailable(n, direction = 1) {
+      if (available.has(n)) return n;
+      let cursor = n;
+      while (cursor >= 1 && cursor <= total) {
+        cursor += direction;
+        if (available.has(cursor)) return cursor;
+      }
+      cursor = n;
+      while (cursor >= 1 && cursor <= total) {
+        cursor -= direction;
+        if (available.has(cursor)) return cursor;
+      }
+      return 9;
+    }
+
+    function go(n) {
+      saveAnswer();
+      current = nearestAvailable(Math.min(total, Math.max(1, n)), n >= current ? 1 : -1);
+      const url = new URL(location.href);
+      url.searchParams.set("q", current);
+      history.replaceState(null, "", url);
+      render();
+    }
+
+    function renderChoices(answer) {
+      choices.innerHTML = "";
+      labels.forEach((label) => {
+        const row = document.createElement("label");
+        row.className = "choice";
+        row.innerHTML = `<input type="radio" name="answer" value="${label}"> ${label}`;
+        const input = row.querySelector("input");
+        input.checked = answer.choice === label;
+        input.addEventListener("change", saveAnswer);
+        choices.appendChild(row);
+      });
+    }
+
+    function renderChips() {
+      chips.innerHTML = "";
+      for (let n = 1; n <= total; n += 1) {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        const keyed = localStorage.getItem(key(n)) ? " answered" : "";
+        chip.className = `chip${n === current ? " active" : ""}${available.has(n) ? keyed : " disabled"}`;
+        chip.textContent = n;
+        chip.disabled = !available.has(n);
+        chip.setAttribute("aria-label", available.has(n) ? `Question ${n}` : `Question ${n} missing`);
+        chip.addEventListener("click", () => go(n));
+        chips.appendChild(chip);
+      }
+    }
+
+    function render() {
+      current = nearestAvailable(current);
+      const answer = loadAnswer(current);
+      meta.textContent = `Question ${current} / ${total}`;
+      answerTitle.textContent = `Question ${current} correct answer`;
+      progress.style.width = `${(current / total) * 100}%`;
+      prev.disabled = current <= 9;
+      next.disabled = current >= 50;
+      missing.style.display = "none";
+      img.style.display = "block";
+      img.src = fileName(current);
+      img.alt = `Question ${current} screenshot`;
+      note.value = answer.note || "";
+      renderChoices(answer);
+      renderChips();
+    }
+
+    img.addEventListener("error", () => {
+      img.style.display = "none";
+      missing.style.display = "block";
+    });
+
+    prev.addEventListener("click", () => go(current - 1));
+    next.addEventListener("click", () => go(current + 1));
+    note.addEventListener("input", saveAnswer);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") go(current - 1);
+      if (event.key === "ArrowRight") go(current + 1);
+    });
+
+    render();
+  </script>
+</body>
+</html>

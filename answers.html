@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCAT Keys</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --paper: #fffdf8;
+      --ink: #1d2724;
+      --muted: #68716d;
+      --line: #d8d0c2;
+      --accent: #0f766e;
+      --amber: #a85f00;
+      --shadow: 0 22px 70px rgba(54, 45, 31, .13);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(15, 118, 110, .10), transparent 30%),
+        repeating-linear-gradient(90deg, rgba(29,39,36,.035) 0 1px, transparent 1px 48px),
+        var(--bg);
+      color: var(--ink);
+      font-family: Avenir Next, Verdana, sans-serif;
+    }
+
+    .app {
+      width: min(1180px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 22px 0 34px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 42px);
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    select,
+    .btn {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0 12px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .panel {
+      background: rgba(255, 253, 248, .95);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .summary {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: #fbf8f1;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 12px;
+    }
+
+    .card.missing {
+      border-color: rgba(168, 95, 0, .55);
+      background: #fff8e8;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .letters {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .letter {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .letter.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 72px;
+      resize: vertical;
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px;
+      font: inherit;
+      color: var(--ink);
+      background: #fffdf8;
+    }
+
+    @media (max-width: 740px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>CCAT Keys</h1>
+        <p class="subtitle">Edit saved correct replies. Built-in keys stay in the data file; changes here are local browser overrides.</p>
+      </div>
+      <div class="controls">
+        <select id="setSelect" aria-label="Question set"></select>
+        <select id="filterSelect" aria-label="Filter">
+          <option value="all">All keys</option>
+          <option value="missing">No key</option>
+          <option value="overrides">Overrides</option>
+        </select>
+        <a class="btn" href="questions.html">Quiz</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="summary" id="summary"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <script src="ccat-data.js"></script>
+  <script src="ccat-text-bank.js"></script>
+  <script>
+    const LETTERS = ["A", "B", "C", "D", "E"];
+    const keyOverrideKey = "ccat-combined-key-overrides-v1";
+    const noteOverrideKey = "ccat-combined-note-overrides-v1";
+    const keyOverrides = JSON.parse(localStorage.getItem(keyOverrideKey) || "{}");
+    const noteOverrides = JSON.parse(localStorage.getItem(noteOverrideKey) || "{}");
+    let activeSet = "all";
+    let activeFilter = "all";
+
+    const setSelect = document.getElementById("setSelect");
+    const filterSelect = document.getElementById("filterSelect");
+    const summary = document.getElementById("summary");
+    const grid = document.getElementById("grid");
+
+    function save() {
+      localStorage.setItem(keyOverrideKey, JSON.stringify(keyOverrides));
+      localStorage.setItem(noteOverrideKey, JSON.stringify(noteOverrides));
+    }
+
+    function allQuestions() {
+      return (window.CCAT_SETS || []).flatMap((set) => set.questions.map((q) => ({
+        ...(window.CCAT_TEXT_BANK || {})[q.id],
+        ...q,
+        setId: set.id,
+        setTitle: set.title,
+        category: ((window.CCAT_TEXT_BANK || {})[q.id] || q).category || (q.type === "image" ? "Image" : "Other"),
+        savedAnswer: keyOverrides[q.id] || ((window.CCAT_TEXT_BANK || {})[q.id] || q).answer || "",
+        savedNote: noteOverrides[q.id] || ((window.CCAT_TEXT_BANK || {})[q.id] || q).explanation || ""
+      })));
+    }
+
+    function visibleQuestions() {
+      let qs = activeSet === "all" ? allQuestions() : allQuestions().filter((q) => q.setId === activeSet);
+      if (activeFilter === "missing") qs = qs.filter((q) => !q.savedAnswer);
+      if (activeFilter === "overrides") qs = qs.filter((q) => keyOverrides[q.id] || noteOverrides[q.id]);
+      return qs;
+    }
+
+    function renderSelectors() {
+      const sets = [{ id: "all", title: "All folders" }, ...(window.CCAT_SETS || [])];
+      setSelect.innerHTML = sets.map((set) => `<option value="${set.id}">${set.title}</option>`).join("");
+      setSelect.value = activeSet;
+      filterSelect.value = activeFilter;
+    }
+
+    function render() {
+      renderSelectors();
+      const all = activeSet === "all" ? allQuestions() : allQuestions().filter((q) => q.setId === activeSet);
+      const qs = visibleQuestions();
+      const keyed = all.filter((q) => q.savedAnswer).length;
+      const missing = all.length - keyed;
+      const overrides = all.filter((q) => keyOverrides[q.id] || noteOverrides[q.id]).length;
+      summary.textContent = `${all.length} questions · ${keyed} keyed · ${missing} no key · ${overrides} local overrides`;
+      grid.innerHTML = "";
+
+      qs.forEach((q) => {
+        const card = document.createElement("article");
+        card.className = `card${q.savedAnswer ? "" : " missing"}`;
+        const title = document.createElement("div");
+        title.className = "title";
+        title.innerHTML = `<span>${q.setTitle} Q${q.number}</span><span class="meta">${q.category}</span>`;
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.textContent = q.savedAnswer ? `Current key: ${q.savedAnswer}` : "No key saved";
+        const letters = document.createElement("div");
+        letters.className = "letters";
+        LETTERS.forEach((letter) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = `letter${q.savedAnswer === letter ? " active" : ""}`;
+          button.textContent = letter;
+          button.addEventListener("click", () => {
+            keyOverrides[q.id] = letter;
+            save();
+            render();
+          });
+          letters.appendChild(button);
+        });
+        const clear = document.createElement("button");
+        clear.type = "button";
+        clear.className = "letter";
+        clear.textContent = "Clear";
+        clear.addEventListener("click", () => {
+          delete keyOverrides[q.id];
+          save();
+          render();
+        });
+        letters.appendChild(clear);
+        const note = document.createElement("textarea");
+        note.placeholder = "Explanation or review note";
+        note.value = q.savedNote || "";
+        note.addEventListener("change", () => {
+          if (note.value.trim()) noteOverrides[q.id] = note.value.trim();
+          else delete noteOverrides[q.id];
+          save();
+          render();
+        });
+        card.append(title, meta, letters, note);
+        grid.appendChild(card);
+      });
+    }
+
+    setSelect.addEventListener("change", () => {
+      activeSet = setSelect.value;
+      render();
+    });
+    filterSelect.addEventListener("change", () => {
+      activeFilter = filterSelect.value;
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>

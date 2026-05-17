@@ -1,0 +1,7 @@
+Assume the first two statements are true. Is the final statement: 1) True, 2) False, or.
+3) Uncertain based on the information provided?
+Abby knows Denise. 23 mee
+Denise knows Sonny. .
+Abby does not know Sonny. A
+O True
+Submit Answer ee.

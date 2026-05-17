@@ -1,0 +1,6 @@
+An investor buys stock in a company and in the twelve months after she invests the-
+value of the stock decreases by 30%. By what amount will the value of the stock
+need to go up from there in order that the price of the stock will be equal to what
+the investor first paid for it?
+
+h

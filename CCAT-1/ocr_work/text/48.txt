@@ -1,0 +1,5 @@
+Ina retail store with 36 employees, 29 work with customers, 11 work in the ‘
+warehouse, and 4 do neither. How many employees both work with customers and ;
+work in the warehouse?
+
+Ss me
