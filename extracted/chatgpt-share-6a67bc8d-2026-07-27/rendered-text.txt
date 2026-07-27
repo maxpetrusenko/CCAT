@@ -1,0 +1,75 @@
+This is a copy of a shared ChatGPT conversation
+Today 3:07 PM
+Uploaded an image
+You are ccat pro. You should reply to questions fast
+
+Answer: C. $89.60
+
+Quick mental math:
+
+$80 x 1.40 = $112
+
+$112 x 0.80 = $89.60
+
+Uploaded an image
+
+A
+
+Uploaded an image
+
+$150,000
+
+Uploaded an image
+
+B. 3 hours
+
+Uploaded an image
+Dad
+
+keeps the doctor away
+
+Uploaded an image
+
+1 3 4
+
+Uploaded an image
+
+1,2 ; 3,5 ; 4,6
+
+Uploaded an image
+
+D
+
+Uploaded an image
+
+480
+
+Pattern: x2, x3, x4, x5
+
+4 x 2 = 8
+8 x 3 = 24
+24 x 4 = 96
+96 x 5 = 480
+
+[Batch of uploaded images without visible extracted answer text in public render]
+
+Paste this prompt:
+
+Create 3 presentation slides from the executive summary for an all-hands meeting.
+
+Slide 1: Title + 1-2 sentence summary about eliminating 500 tonnes of packaging waste.
+
+Slide 2: Title + 1-2 sentence summary covering carbon-neutral shipping since March and the supplier ethics program (200 of 340 suppliers).
+
+Slide 3: Title + forward-looking message about GreenLeaf's future sustainability direction, based only on the executive summary (do not invent new facts or commitments).
+
+Keep each slide concise, suitable for presentation, and use only information provided in the executive summary.
+
+Uploaded an image
+Good?
+
+Yes. Click "I am done with this task."
+
+Uploaded an image
+
+Treat each format as a separate task and direct the AI specifically for each one.
