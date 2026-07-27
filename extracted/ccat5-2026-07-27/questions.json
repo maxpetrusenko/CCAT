@@ -1,0 +1,447 @@
+{
+  "dataset": "ccat5-2026-07-27",
+  "source_directory": "/Users/maxpetrusenko/Desktop/CCAT5",
+  "transcript_item_count": 37,
+  "source_image_count": 30,
+  "cropped_image_count": 30,
+  "missing_source_count": 7,
+  "items": [
+    {
+      "index": 1,
+      "source_filename": "IMG_9FA7985C-F72D-4CBB-A609-918B665F849C.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 2,
+      "source_filename": "IMG_1BD2298B-67B4-45E4-99D9-00A9D2D29A80.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 3,
+      "source_filename": "IMG_783B72CF-EE20-4F56-948B-139E9A7E916A.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 4,
+      "source_filename": "IMG_A85E9915-1954-4C24-9765-B106D938CAE3.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 5,
+      "source_filename": "IMG_31448037-1123-4C4F-ADF2-8862BF1E4959.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 6,
+      "source_filename": "IMG_2DE86DD8-0A7E-4015-9C42-081467FD3F53.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-006-IMG_2DE86DD8.jpg",
+      "record_type": "spatial_reasoning",
+      "text": "Select the option that represents three out of the five alternative figures which, when fitted together, form a complete square.",
+      "options": ["2 4 5", "1 3 4", "1 4 5", "[fourth option clipped in source]"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "The photograph clips the beginning of the instruction and the rightmost answer option."
+    },
+    {
+      "index": 7,
+      "source_filename": "IMG_D93CD07C-5D29-474D-8A22-AAF048DB60C1.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-007-IMG_D93CD07C.jpg",
+      "record_type": "visual_categorization",
+      "text": "Can you group the given figures into three categories?",
+      "options": [
+        "1,4; 2,3; 5,3 [as visible; likely clipped or blurred]",
+        "1,5; 2,3; [remainder clipped]",
+        "1,6; 2,3; 4,5",
+        "1,2; 3,5; [remainder clipped]"
+      ],
+      "extraction_status": "partial_source_clipping",
+      "notes": "The six figures are preserved in the crop. Right-side option text is cut off in the original photograph."
+    },
+    {
+      "index": 8,
+      "source_filename": "IMG_F7FE0166-2D6D-4C94-A845-8B7B174A0ABA.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-008-IMG_F7FE0166.jpg",
+      "record_type": "visual_matrix",
+      "text": "Help me figure out the missing passcode.",
+      "options": ["A", "B", "C", "D"],
+      "extraction_status": "complete_visual",
+      "notes": "The passcode matrices and four visual options are preserved in the crop."
+    },
+    {
+      "index": 9,
+      "source_filename": "IMG_44E264CA-4944-4FF7-A42F-31286B4CF451.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-009-IMG_44E264CA.jpg",
+      "record_type": "number_sequence",
+      "text": "Help me understand if adjacent numbers in the following series are related: 4, 8, 24, 96, ?. What should be the next number in this series?",
+      "options": ["480", "420", "[two options clipped in source]"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "The first sentence is partially clipped on the right; the sequence and main question are readable."
+    },
+    {
+      "index": 10,
+      "source_filename": "IMG_EEB0B010-EA14-4342-996D-25D278B664FD.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-010-IMG_EEB0B010.jpg",
+      "record_type": "visual_pattern",
+      "text": "Which one of the possible options replaces the missing part?",
+      "options": ["A", "B", "C", "D", "E", "F"],
+      "extraction_status": "complete_visual",
+      "notes": "The pattern sequence and all six visual options are preserved in the crop."
+    },
+    {
+      "index": 11,
+      "source_filename": "IMG_E6744DBF-B76C-4927-AA13-F4C559CEEBBD.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 12,
+      "source_filename": "IMG_FC0CD00C-B76C-49D0-BE2D-AA5F1CC3ADF3.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-012-IMG_FC0CD00C.jpg",
+      "record_type": "logical_conclusion",
+      "text": "The Los Angeles office is twice as big as the New York office. The New York office is half the size of the Seattle office and is twice as big as the Florida office. The Seattle office employs 50 more individuals than the New York office does. The Los Angeles office employs 75 more individuals than the New York office does. Conclusion: The Los Angeles office employs fewer individuals than the Seattle office.",
+      "options": ["True", "False"],
+      "extraction_status": "complete",
+      "notes": null
+    },
+    {
+      "index": 13,
+      "source_filename": "IMG_C16D7EB4-1324-419F-B4F2-91DEEB94728E.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-013-IMG_C16D7EB4.jpg",
+      "record_type": "logical_conclusion",
+      "text": "The Idalto Corporation has 250 offices in 30 different states. For Idalto to open a new office, there needs to be a market-potential estimate that exceeds $50,000,000 annually. [Remaining description clipped in source.] Conclusion: Florida's market potential exceeds $50,000,000 annually.",
+      "options": ["True", "False"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "The right edge of the source description is outside the photograph."
+    },
+    {
+      "index": 14,
+      "source_filename": "IMG_B31465FB-B435-4C0B-BE08-E4322BE597F8.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-014-IMG_B31465FB.jpg",
+      "record_type": "verbal_fill_in",
+      "text": "[Beginning clipped] mindset on Health and Safety: Our health is our top concern. Our staff works diligently to _____ a safe environment [clipped] _____ to keeping our employees safe so they can work in a peaceful atmosphere. Select the combination of words that best fills in the blanks.",
+      "options": ["neglect, uninterested", "maintain, committed", "create, nonchalant"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "The original photograph cuts off text on both the left and right edges and may omit a fourth option."
+    },
+    {
+      "index": 15,
+      "source_filename": "IMG_4EBC5CB4-D6B9-4A56-AD43-F87F64803A7D.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-015-IMG_4EBC5CB4.jpg",
+      "record_type": "logical_conclusion",
+      "text": "Idalto is an entertainment company headquartered in New York City. Idalto has corporate offices in [clipped] countries. For Idalto to open a full corporate office in a country, there needs to be a local market estimated at $10,000,000 annually. Sweden's market is the largest among the countries that do not have a corporate office, while Idalto's newest office is in Paris, France. Conclusion: Paris's local market exceeds $10,000,000 annually.",
+      "options": ["Conclusion follows", "Conclusion does not follow"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "A number and several edge words are cut off in the original photograph."
+    },
+    {
+      "index": 16,
+      "source_filename": "IMG_4ED37578-935F-4661-9B77-1E7A9751C51F.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-016-IMG_4ED37578.jpg",
+      "record_type": "numerical_comparison",
+      "text": "Which is the smallest number?",
+      "options": ["9/12", "2/7", "3/6", "[fourth option clipped in source]"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "A fourth option is outside the photographed frame."
+    },
+    {
+      "index": 17,
+      "source_filename": "IMG_B881D6E7-FC43-4026-B11E-B28F1437D2ED.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-017-IMG_B881D6E7.jpg",
+      "record_type": "chart_reading",
+      "text": "Total Revenue: $25 Billion. What was the revenue of R&B in 2023?",
+      "options": ["[option text blurred or clipped]"],
+      "extraction_status": "question_complete_options_unreadable",
+      "notes": "The pie chart labels R&B as 18%. The numeric option text is not reliable enough to transcribe."
+    },
+    {
+      "index": 18,
+      "source_filename": "IMG_1A8066B5-B5B0-496B-BCC6-E70C190480BA.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-018-IMG_1A8066B5.jpg",
+      "record_type": "arithmetic_word_problem",
+      "text": "Idalto Entertainment is partnering with several record stores. The Chicago store has 150 antique vinyl records produced by Idalto, whereas the New York store has 175. The Chicago store sold 125 records in a recent auction, while the New York store sold 125, and another 25 were found to be defective so they were not included in the auction. Which store has more antique vinyl records remaining, Chicago or New York?",
+      "options": ["Chicago", "New York", "Both have the same"],
+      "extraction_status": "complete",
+      "notes": null
+    },
+    {
+      "index": 19,
+      "source_filename": "IMG_F3E5C09D-7878-469B-99BD-1A6D37463ADB.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-019-IMG_F3E5C09D.jpg",
+      "record_type": "chart_calculation",
+      "text": "What was the percentage increase in the number of tickets sold at Wembley Stadium when comparing the last two months of 2022 vs. the first two months of 2023?",
+      "options": ["49%", "45%", "0%", "29%"],
+      "extraction_status": "complete",
+      "notes": "The chart and legend are preserved in the crop."
+    },
+    {
+      "index": 20,
+      "source_filename": "IMG_7C6DFCC3-117B-475B-AF05-4E075C24204D.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-020-IMG_7C6DFCC3.jpg",
+      "record_type": "data_lookup",
+      "text": "What is Sarah's zip code?",
+      "options": ["10011", "10010", "10010", "[fourth option clipped in source]"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "The Sarah Smith and Katie Balakrishnan contact cards are preserved; the rightmost option is clipped."
+    },
+    {
+      "index": 21,
+      "source_filename": "IMG_DAFE26CD-03B1-4EBA-A620-DA2375392B80.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-021-IMG_DAFE26CD.jpg",
+      "record_type": "data_lookup",
+      "text": "What are the last four digits of Maria Burns-Lee's office phone number?",
+      "options": ["0155", "0055", "0915", "9955"],
+      "extraction_status": "complete",
+      "notes": "The business cards and all four options are preserved in the crop."
+    },
+    {
+      "index": 22,
+      "source_filename": "IMG_6CD52FDA-162C-418E-BC7F-2288A4A79349.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-022-IMG_6CD52FDA.jpg",
+      "record_type": "data_matching",
+      "text": "P.O. BOX 3245456777. Which one is the same?",
+      "options": ["PO BOX 3245456771", "PO BOX 3245456777", "PO BOX 3345456677", "PO BOX 3345456777"],
+      "extraction_status": "complete",
+      "notes": null
+    },
+    {
+      "index": 23,
+      "source_filename": "IMG_B1C24193-B148-4A9C-9702-C5B50143C8AD.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-023-IMG_B1C24193.jpg",
+      "record_type": "data_matching",
+      "text": "+12025550188. Which one is the same?",
+      "options": ["+12225550788", "+10225550188", "[right-side option clipped]", "None"],
+      "extraction_status": "partial_source_clipping",
+      "notes": "Two right-side option fields are outside or partly outside the original photograph."
+    },
+    {
+      "index": 24,
+      "source_filename": "IMG_D57BE2CB-76C1-44FA-9D23-20B205C1B430.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-024-IMG_D57BE2CB.jpg",
+      "record_type": "data_lookup",
+      "text": "For the Alfa Romeo, what does our license plate number end with?",
+      "options": ["3G04", "3GOA", "3GO4", "3G04"],
+      "extraction_status": "partial_blur",
+      "notes": "Some zero/O characters are visually ambiguous because the source is blurred."
+    },
+    {
+      "index": 25,
+      "source_filename": "IMG_027CD925-1FFD-4479-9951-CC178A9FC0BD.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-025-IMG_027CD925.jpg",
+      "record_type": "ai_fluency",
+      "text": "Your manager now asks you to use the AI to create a detailed section about GreenLeaf's packaging waste reduction, including industry context, why 500 tonnes matters, and supporting arguments. Which approach would be most effective?",
+      "options": [
+        "Write the section yourself and ask the AI to polish the language at the end.",
+        "Ask the AI to write the section, then ask it to review and improve its own work.",
+        "Ask the AI for each element in turn, reviewing each one before moving to the next.",
+        "Ask the AI to write the entire section in one prompt covering all three elements."
+      ],
+      "extraction_status": "complete",
+      "notes": null
+    },
+    {
+      "index": 26,
+      "source_filename": "IMG_62E151EA-3957-4296-AEB7-A4DF884F9830.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-026-IMG_62E151EA.jpg",
+      "record_type": "ai_fluency",
+      "text": "Which of the following tasks would the AI handle LEAST reliably?",
+      "options": [
+        "Summarising the three key achievements into bullet points.",
+        "Rewriting the packaging section to match the tone used in GreenLeaf's past sustainability reports.",
+        "Deciding which of the three achievements to lead with based on what the board cares about most.",
+        "Generating a specific industry benchmark for packaging waste reduction with a citation."
+      ],
+      "extraction_status": "complete",
+      "notes": null
+    },
+    {
+      "index": 27,
+      "source_filename": "IMG_6287E5F5-2E98-4BE1-9A47-5C9FBBF88F21.jpeg",
+      "source_status": "missing",
+      "crop_image": null,
+      "record_type": "unknown",
+      "text": null,
+      "options": [],
+      "extraction_status": "source_missing",
+      "notes": "Filename was supplied in the transcript but the file was not present in the source directory."
+    },
+    {
+      "index": 28,
+      "source_filename": "IMG_64BA8BB3-3BC2-4D30-A128-16FA8B08AD79.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-028-IMG_64BA8BB3.jpg",
+      "record_type": "task_instruction",
+      "text": "Task 6/11. A colleague used the AI to draft this section. AI drafts often need careful review. Check it before it goes into the final document. Read it closely. Flag anything that shouldn't go to your manager as-is, and direct the AI to fix it.",
+      "options": [],
+      "extraction_status": "complete",
+      "notes": "The scenario continues below the visible area; the task instruction is readable."
+    },
+    {
+      "index": 29,
+      "source_filename": "IMG_5052FE86-C67C-4238-880B-225CCE900B07.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-029-IMG_5052FE86.jpg",
+      "record_type": "ai_draft",
+      "text": "Draft section on packaging waste reduction. Read through it and let me know if it needs changing — we can work through any fixes together. The AI-generated draft claims GreenLeaf eliminated 500 tonnes of packaging waste and cites a 2024 Breverton Group sustainability benchmark averaging 180 tonnes per year.",
+      "options": [],
+      "extraction_status": "complete_with_summary",
+      "notes": "The record captures the review prompt and the material factual claim requiring review."
+    },
+    {
+      "index": 30,
+      "source_filename": "IMG_358D346D-D473-4E2F-85DF-24B994DEF63E.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-030-IMG_358D346D.jpg",
+      "record_type": "ai_chat_turn",
+      "text": "what about carbon neutral thing?",
+      "options": [],
+      "extraction_status": "complete",
+      "notes": "The crop includes the AI's revised paragraph adding carbon-neutral shipping."
+    },
+    {
+      "index": 31,
+      "source_filename": "IMG_1F6A8437-E359-43EE-9A78-A7ADC579483C.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-031-IMG_1F6A8437.jpg",
+      "record_type": "ai_fluency",
+      "text": "After reviewing the packaging section draft, which type of issue should you be MOST concerned about in AI-generated content?",
+      "options": [
+        "Structure and flow, since AI content can feel disjointed or poorly organized.",
+        "Specific claims, statistics, or citations that the AI may have generated.",
+        "Formatting inconsistencies, since AI often mixes styles within a document.",
+        "Grammar and spelling errors that slipped through the AI's writing."
+      ],
+      "extraction_status": "complete_rotated",
+      "notes": "The original source was sideways; the crop is rotated upright."
+    },
+    {
+      "index": 32,
+      "source_filename": "IMG_33C3FC20-4C17-41DB-BFBE-DC08A573897C.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-032-IMG_33C3FC20.jpg",
+      "record_type": "ai_fluency",
+      "text": "Your manager is preparing a procurement review. She shares a spreadsheet containing GreenLeaf's top 20 suppliers, including supplier names, contracted prices, review [unreadable], and notes from confidential negotiations. She asks you to use the AI to identify pricing patterns and flag potential renegotiation opportunities. What should you do before sharing the data with the AI?",
+      "options": [
+        "Remove supplier names but keep the prices and terms so the AI can identify patterns.",
+        "Share the spreadsheet as-is, since the AI is a secure internal tool and the data stays in the [clipped].",
+        "Aggregate or anonymise the data first, then use the AI to analyse it for patterns.",
+        "Decline to use the AI for this task entirely."
+      ],
+      "extraction_status": "partial_blur_and_clipping",
+      "notes": "Blur and edge clipping make a few words unreadable; those portions are explicitly marked."
+    },
+    {
+      "index": 33,
+      "source_filename": "IMG_0F58DED9-96BE-4C26-B224-787B5B7A2051.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-033-IMG_0F58DED9.jpg",
+      "record_type": "task_instruction",
+      "text": "Task 10/11. The marketing team is preparing for GreenLeaf's quarterly all-hands meeting next week. They've asked you for 3 key points from the executive summary that they can turn into slides for the presentation. Marketing has asked for slides with a title and short body each. Make the last slide forward-looking — about where GreenLeaf is heading. Produce what they need with the help of the AI. Direct the AI to produce 3 slides from this summary, suitable for an all-hands presentation.",
+      "options": [],
+      "extraction_status": "complete",
+      "notes": "The related source summary is item 34, scenario reference is item 35, and generated output is item 36."
+    },
+    {
+      "index": 34,
+      "source_filename": "IMG_1977F56F-0855-4C0C-9A73-AF6815A72E12.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-034-IMG_1977F56F.jpg",
+      "record_type": "reference_text",
+      "text": "In 2024, GreenLeaf Co. made meaningful progress toward a more sustainable future. We eliminated 500 tonnes of packaging waste, significantly reducing our environmental footprint across the product lifecycle. Since March, our shipping operations have been fully carbon neutral, reflecting our commitment to cleaner logistics at scale. We also expanded our supplier ethics program to cover 200 of our 340 suppliers, embedding responsible sourcing deeper into our supply chain. These milestones demonstrate that sustainability is not a peripheral concern but a core driver of how GreenLeaf operates — and a foundation for the progress still to come.",
+      "options": [],
+      "extraction_status": "complete",
+      "notes": "Source label: GreenLeaf executive summary, approximately 95 words."
+    },
+    {
+      "index": 35,
+      "source_filename": "IMG_F8B2AB1F-575A-4130-9A08-535DAB3BA9FB.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-035-IMG_F8B2AB1F.jpg",
+      "record_type": "scenario_reference",
+      "text": "You're a Project coordinator at GreenLeaf Co., a mid-size consumer goods company. You're preparing content for this year's sustainability report and your manager has asked you to use the AI assistant throughout the task. Audience: Company leadership and employees. Key figures provided include 500 tonnes of packaging waste eliminated, carbon-neutral shipping since March, and a supplier ethics program covering 200 of 340 suppliers.",
+      "options": [],
+      "extraction_status": "partial_blur",
+      "notes": "The photograph is out of focus. Only text that remains visually supportable is included."
+    },
+    {
+      "index": 36,
+      "source_filename": "IMG_4CECE5B5-F2FA-4F83-8E79-90F1A33FC78E.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-036-IMG_4CECE5B5.jpg",
+      "record_type": "ai_output_review",
+      "text": "review the source?",
+      "options": [],
+      "extraction_status": "complete",
+      "notes": "The crop includes the three generated slide sections and the start of the AI's source review."
+    },
+    {
+      "index": 37,
+      "source_filename": "IMG_B716D703-F2CD-4714-8CBA-8D65520A78E9.jpeg",
+      "source_status": "available",
+      "crop_image": "images/question-037-IMG_B716D703.jpg",
+      "record_type": "ai_fluency",
+      "text": "You used AI to draft content that needs to work in multiple formats: a written summary, slides, and an internal email. What's the right approach?",
+      "options": [
+        "Have the AI generate all three versions in a single prompt, naming the three target formats.",
+        "Pick the most important format and direct the AI carefully for that one, then derive the others from it.",
+        "Generate one strong version with the AI and copy it into each format with light edits.",
+        "Treat each format as a separate task and direct the AI specifically for each one."
+      ],
+      "extraction_status": "complete",
+      "notes": null
+    }
+  ]
+}

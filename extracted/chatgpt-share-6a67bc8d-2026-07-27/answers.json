@@ -1,0 +1,90 @@
+{
+  "title": "Answers extracted from rendered shared chat text",
+  "share_url": "https://chatgpt.com/share/6a67bc8d-55c0-83ea-9339-719efad6b860",
+  "answers": [
+    {
+      "answer_id": "answer-01",
+      "question_ref": "chatgpt-share-01",
+      "answer": "C. $89.60",
+      "explanation": "$80 x 1.40 = $112; $112 x 0.80 = $89.60.",
+      "category": "math"
+    },
+    {
+      "answer_id": "answer-02",
+      "question_ref": "chatgpt-share-02",
+      "answer": "A",
+      "explanation": "Shared chat answer only; source image not downloadable from public share.",
+      "category": "unknown"
+    },
+    {
+      "answer_id": "answer-03",
+      "question_ref": "chatgpt-share-03",
+      "answer": "$150,000",
+      "explanation": "Shared chat answer only; source image not downloadable from public share.",
+      "category": "math"
+    },
+    {
+      "answer_id": "answer-04",
+      "question_ref": "chatgpt-share-04",
+      "answer": "B. 3 hours",
+      "explanation": "Shared chat answer only; source image not downloadable from public share.",
+      "category": "math"
+    },
+    {
+      "answer_id": "answer-05",
+      "question_ref": "chatgpt-share-05",
+      "answer": "keeps the doctor away",
+      "explanation": "Completes the saying: an apple a day keeps the doctor away.",
+      "category": "verbal"
+    },
+    {
+      "answer_id": "answer-06",
+      "question_ref": "chatgpt-share-06",
+      "answer": "1 3 4",
+      "explanation": "Shared chat answer only; source image not downloadable from public share.",
+      "category": "unknown"
+    },
+    {
+      "answer_id": "answer-07",
+      "question_ref": "chatgpt-share-07",
+      "answer": "1,2 ; 3,5 ; 4,6",
+      "explanation": "Shared chat answer only; source image not downloadable from public share.",
+      "category": "logic"
+    },
+    {
+      "answer_id": "answer-08",
+      "question_ref": "chatgpt-share-08",
+      "answer": "D",
+      "explanation": "Shared chat answer only; source image not downloadable from public share.",
+      "category": "unknown"
+    },
+    {
+      "answer_id": "answer-09",
+      "question_ref": "chatgpt-share-09",
+      "answer": "480",
+      "explanation": "Pattern: x2, x3, x4, x5. 4 x 2 = 8; 8 x 3 = 24; 24 x 4 = 96; 96 x 5 = 480.",
+      "category": "sequence"
+    },
+    {
+      "answer_id": "answer-10",
+      "question_ref": "chatgpt-share-ai-fluency-01",
+      "answer": "Create 3 presentation slides from the executive summary for an all-hands meeting. Slide 1: Title + 1-2 sentence summary about eliminating 500 tonnes of packaging waste. Slide 2: Title + 1-2 sentence summary covering carbon-neutral shipping since March and the supplier ethics program (200 of 340 suppliers). Slide 3: Title + forward-looking message about GreenLeaf future sustainability direction, based only on the executive summary (do not invent new facts or commitments). Keep each slide concise, suitable for presentation, and use only information provided in the executive summary.",
+      "explanation": "Prompt answer from shared chat.",
+      "category": "ai_fluency_prompting"
+    },
+    {
+      "answer_id": "answer-11",
+      "question_ref": "chatgpt-share-ai-fluency-02",
+      "answer": "Click \"I am done with this task.\"",
+      "explanation": "Shared chat said the output uses only facts from the executive summary, has 3 slides, includes short body text, and does not invent new commitments.",
+      "category": "ai_fluency_review"
+    },
+    {
+      "answer_id": "answer-12",
+      "question_ref": "chatgpt-share-ai-fluency-03",
+      "answer": "Treat each format as a separate task and direct the AI specifically for each one.",
+      "explanation": "Shared chat answer.",
+      "category": "ai_fluency_strategy"
+    }
+  ]
+}
