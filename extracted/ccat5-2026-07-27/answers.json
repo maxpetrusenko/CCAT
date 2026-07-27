@@ -1,0 +1,83 @@
+{
+  "dataset": "ccat5-2026-07-27",
+  "policy": "Answers are recorded only when supplied in the pasted transcript. A visible UI selection is recorded as an observation, not as a verified correct answer.",
+  "items": [
+    {"index": 1, "source_filename": "IMG_9FA7985C-F72D-4CBB-A609-918B665F849C.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 2, "source_filename": "IMG_1BD2298B-67B4-45E4-99D9-00A9D2D29A80.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 3, "source_filename": "IMG_783B72CF-EE20-4F56-948B-139E9A7E916A.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 4, "source_filename": "IMG_A85E9915-1954-4C24-9765-B106D938CAE3.jpeg", "status": "not_supplied", "answer_text": null},
+    {
+      "index": 5,
+      "source_filename": "IMG_31448037-1123-4C4F-ADF2-8862BF1E4959.jpeg",
+      "status": "transcript_note_unresolved",
+      "answer_text": null,
+      "transcript_note": "Dad",
+      "notes": "This text follows the filename in the transcript, but the missing source image prevents verifying that it is an answer."
+    },
+    {"index": 6, "source_filename": "IMG_2DE86DD8-0A7E-4015-9C42-081467FD3F53.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 7, "source_filename": "IMG_D93CD07C-5D29-474D-8A22-AAF048DB60C1.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 8, "source_filename": "IMG_F7FE0166-2D6D-4C94-A845-8B7B174A0ABA.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 9, "source_filename": "IMG_44E264CA-4944-4FF7-A42F-31286B4CF451.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 10, "source_filename": "IMG_EEB0B010-EA14-4342-996D-25D278B664FD.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 11, "source_filename": "IMG_E6744DBF-B76C-4927-AA13-F4C559CEEBBD.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 12, "source_filename": "IMG_FC0CD00C-B76C-49D0-BE2D-AA5F1CC3ADF3.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 13, "source_filename": "IMG_C16D7EB4-1324-419F-B4F2-91DEEB94728E.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 14, "source_filename": "IMG_B31465FB-B435-4C0B-BE08-E4322BE597F8.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 15, "source_filename": "IMG_4EBC5CB4-D6B9-4A56-AD43-F87F64803A7D.jpeg", "status": "not_supplied", "answer_text": null},
+    {
+      "index": 16,
+      "source_filename": "IMG_4ED37578-935F-4661-9B77-1E7A9751C51F.jpeg",
+      "status": "visible_selection_unverified",
+      "answer_text": null,
+      "observed_selection": "3/6",
+      "notes": "The source UI shows this option selected. This is not treated as a verified answer."
+    },
+    {"index": 17, "source_filename": "IMG_B881D6E7-FC43-4026-B11E-B28F1437D2ED.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 18, "source_filename": "IMG_1A8066B5-B5B0-496B-BCC6-E70C190480BA.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 19, "source_filename": "IMG_F3E5C09D-7878-469B-99BD-1A6D37463ADB.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 20, "source_filename": "IMG_7C6DFCC3-117B-475B-AF05-4E075C24204D.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 21, "source_filename": "IMG_DAFE26CD-03B1-4EBA-A620-DA2375392B80.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 22, "source_filename": "IMG_6CD52FDA-162C-418E-BC7F-2288A4A79349.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 23, "source_filename": "IMG_B1C24193-B148-4A9C-9702-C5B50143C8AD.jpeg", "status": "not_supplied", "answer_text": null},
+    {
+      "index": 24,
+      "source_filename": "IMG_D57BE2CB-76C1-44FA-9D23-20B205C1B430.jpeg",
+      "status": "visible_selection_unverified",
+      "answer_text": null,
+      "observed_selection": "3G04",
+      "notes": "The source UI shows this option selected. This is not treated as a verified answer."
+    },
+    {"index": 25, "source_filename": "IMG_027CD925-1FFD-4479-9951-CC178A9FC0BD.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 26, "source_filename": "IMG_62E151EA-3957-4296-AEB7-A4DF884F9830.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 27, "source_filename": "IMG_6287E5F5-2E98-4BE1-9A47-5C9FBBF88F21.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 28, "source_filename": "IMG_64BA8BB3-3BC2-4D30-A128-16FA8B08AD79.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 29, "source_filename": "IMG_5052FE86-C67C-4238-880B-225CCE900B07.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 30, "source_filename": "IMG_358D346D-D473-4E2F-85DF-24B994DEF63E.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 31, "source_filename": "IMG_1F6A8437-E359-43EE-9A78-A7ADC579483C.jpeg", "status": "not_supplied", "answer_text": null},
+    {"index": 32, "source_filename": "IMG_33C3FC20-4C17-41DB-BFBE-DC08A573897C.jpeg", "status": "not_supplied", "answer_text": null},
+    {
+      "index": 33,
+      "source_filename": "IMG_0F58DED9-96BE-4C26-B224-787B5B7A2051.jpeg",
+      "status": "transcript_supplied",
+      "answer_text": "Create 3 presentation slides from the executive summary for an all-hands meeting.\n\nSlide 1: Title + 1–2 sentence summary about eliminating 500 tonnes of packaging waste.\n\nSlide 2: Title + 1–2 sentence summary covering carbon-neutral shipping since March and the supplier ethics program (200 of 340 suppliers).\n\nSlide 3: Title + forward-looking message about GreenLeaf's future sustainability direction, based only on the executive summary (do not invent new facts or commitments).\n\nKeep each slide concise, suitable for presentation, and use only information provided in the executive summary.",
+      "evidence": "Pasted transcript after the task/source/scenario image sequence.",
+      "related_items": [34, 35, 36]
+    },
+    {"index": 34, "source_filename": "IMG_1977F56F-0855-4C0C-9A73-AF6815A72E12.jpeg", "status": "reference_only", "answer_text": null},
+    {"index": 35, "source_filename": "IMG_F8B2AB1F-575A-4130-9A08-535DAB3BA9FB.jpeg", "status": "reference_only", "answer_text": null},
+    {
+      "index": 36,
+      "source_filename": "IMG_4CECE5B5-F2FA-4F83-8E79-90F1A33FC78E.jpeg",
+      "status": "transcript_supplied_review",
+      "answer_text": "Yes. Click \"I am done with this task.\"\n\nThe output:\n- Uses only facts from the executive summary.\n- Has 3 slides.\n- Includes titles and short body text.\n- Makes the last slide forward-looking without inventing new commitments.\n\nThis is what they're looking for.",
+      "evidence": "Pasted transcript immediately after this filename and the question \"Good?\"."
+    },
+    {
+      "index": 37,
+      "source_filename": "IMG_B716D703-F2CD-4714-8CBA-8D65520A78E9.jpeg",
+      "status": "transcript_supplied",
+      "answer_text": "Treat each format as a separate task and direct the AI specifically for each one.",
+      "evidence": "Pasted transcript immediately after this filename."
+    }
+  ]
+}
